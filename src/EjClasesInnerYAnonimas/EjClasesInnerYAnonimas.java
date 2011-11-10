@@ -38,7 +38,7 @@ public class EjClasesInnerYAnonimas {
 
         
         
-        bPulsame.addActionListener(new Escuchador());
+        bPulsame.addActionListener(new EscuchadorInner());
         /* 
          * Como el escuchador para 'bSalir' no se va a utilizar en más sitios,
          *  - en lugar de necesitar
@@ -81,7 +81,7 @@ public class EjClasesInnerYAnonimas {
      * 
      */
     
-    class Escuchador implements ActionListener {
+    class EscuchadorInner implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent ae) {

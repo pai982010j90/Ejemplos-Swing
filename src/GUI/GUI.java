@@ -5,6 +5,8 @@
 package GUI;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -77,7 +79,13 @@ public class GUI {
         crearArbol();
 
         area = new JTextArea("Area");
+        area.setToolTipText("Esto es una leyenda");
+        area.setForeground(Color.red);
+
         area2 = new JTextArea("Area");
+        //area2.setBackground(Color.YELLOW);
+        area2.setBackground(new Color(201,185, 121));
+        //area2.setFont(new Font());
 
         f.add(panel1, BorderLayout.WEST);
         f.add(panel2, BorderLayout.CENTER);
@@ -170,6 +178,8 @@ public class GUI {
         raiz.add(nodo3);
         arbol = new JTree(raiz);
         arbol.addTreeSelectionListener(new EscuchadorArbol());
+
+
 
     }
 
